@@ -1,3 +1,4 @@
 language: cpp
+script: ./configure && make && make test
 notifications:
   email: aryank.kasyap77783@gmail.com
