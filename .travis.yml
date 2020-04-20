@@ -1,5 +1,6 @@
 os: windows
 language: cpp
-script: make
+script: 
+  - ./download_other_githubs
 notifications:
   email: aryank.kasyap77783@gmail.com
