@@ -1,7 +1,15 @@
-os: windows
 language: cpp
 compiler: gcc
+dist: trusty
 
-script:
-- g++ main.cpp -o travis_gcc_cpp98
-- ./travis_gcc_cpp98
+before_install:
+  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+  - sudo apt-get update -qq
+
+install: 
+  - sudo apt-get install -qq g++-6
+  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90
+
+script: 
+  - g++ main.cpp -std=c++17 -o travis_gcc_cpp17
+  - ./travis_gcc_cpp17
