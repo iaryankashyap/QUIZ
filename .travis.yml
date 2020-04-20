@@ -1,6 +1,7 @@
 os: windows
 language: cpp
-script: 
-  - ./download_other_githubs
-notifications:
-  email: aryank.kasyap77783@gmail.com
+compiler: gcc
+
+script:
+- g++ main.cpp -o travis_gcc_cpp98
+- ./travis_gcc_cpp98
