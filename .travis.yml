@@ -1,5 +1,5 @@
 os: windows
 language: cpp
-script: QuizCode.cpp
+script: make
 notifications:
   email: aryank.kasyap77783@gmail.com
